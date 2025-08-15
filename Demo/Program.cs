@@ -27,21 +27,21 @@ namespace Demo
             //Console.WriteLine("l1 and l2 after swapping ");
 
             //Point p01 = new Point() { 
-            
+
             //   X = 10,
             //   Y = 20
-            
+
             //};
 
             //Point p02 = new Point() { X = 50, Y = 60 };
 
-            
+
             //Console.WriteLine("p1 and p2 after swapping ");
 
             //Console.WriteLine($"p01 = {p01.ToString()} \t p02= {p02.ToString()}");
 
             //Console.WriteLine("##########################");
-            
+
             //Helper<Point>.SWap(ref p01, ref p02);
             //Console.WriteLine("p1 and p2 after swapping ");
 
@@ -53,37 +53,49 @@ namespace Demo
 
             #region Example02 [linear search]
 
-         //   int[] arr = new int[] { 10, 20, 30, 49, 50, 60 };
-         //   int value = 20;
-         //int index=   Helper<int>.LinearSearch(arr, value);
-         //   Console.WriteLine($"  value {value} , at index {index}" );
+            //   int[] arr = new int[] { 10, 20, 30, 49, 50, 60 };
+            //   int value = 20;
+            //int index=   Helper<int>.LinearSearch(arr, value);
+            //   Console.WriteLine($"  value {value} , at index {index}" );
 
 
-         //   Point[] points = new Point[]
-         //   {
-         //       new Point(1,2),
-         //       new Point(3,4),
-         //       new Point(4,5),
-         //   };
+            //   Point[] points = new Point[]
+            //   {
+            //       new Point(1,2),
+            //       new Point(3,4),
+            //       new Point(4,5),
+            //   };
 
-         //   Point p3 = new Point(3, 4);
-         //  int index2= Helper<Point>.LinearSearch(points, p3);
-         //   Console.WriteLine($"  Value = {p3} , at index {index2}");
+            //   Point p3 = new Point(3, 4);
+            //  int index2= Helper<Point>.LinearSearch(points, p3);
+            //   Console.WriteLine($"  Value = {p3} , at index {index2}");
 
 
-          //  Employee[] employees =
-          //  {
-          //      new Employee(1,"sayed",5000),
-          //      new Employee(2,"hesham",4000),
-          //      new Employee(3,"ahmed",7000)
+            //  Employee[] employees =
+            //  {
+            //      new Employee(1,"sayed",5000),
+            //      new Employee(2,"hesham",4000),
+            //      new Employee(3,"ahmed",7000)
 
-          //  };
+            //  };
 
-          //  Employee emp = new Employee(1, "sayed", 5000);
+            //  Employee emp = new Employee(1, "sayed", 5000);
 
-          //int index3=  Helper<Employee>.LinearSearch(employees, emp);
-          //  Console.WriteLine(index3);
-          //  #endregion
+            //int index3=  Helper<Employee>.LinearSearch(employees, emp);
+            //  Console.WriteLine(index3);
+            #endregion
+
+
+            #region relations between equals-hashcode
+            //Employee emoloyee01 = new Employee(6, "sayed", 1000);
+            //Employee emoloyee02 = new Employee(1, "sayed", 1000);
+
+            //Console.WriteLine(emoloyee01.GetHashCode());
+            //Console.WriteLine(emoloyee02.GetHashCode());
+            #endregion
+
+
+
 
         }
     }

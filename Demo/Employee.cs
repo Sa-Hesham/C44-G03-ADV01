@@ -36,6 +36,11 @@ namespace Demo
             return false;
         }
 
+        public override int GetHashCode()
+        {
+           // return this.Id.GetHashCode()+this.Name.GetHashCode()+this.Salary.GetHashCode(); //deprecated
+           return HashCode.Combine(Id.GetHashCode(), Name.GetHashCode(), Salary.GetHashCode());
+        }
 
 
     }
