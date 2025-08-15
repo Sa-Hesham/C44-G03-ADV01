@@ -13,11 +13,12 @@ namespace Demo
 
         public Point(int x , int y)
         {
-          
+          X = x;    
+          Y = y;
         }
         public override string ToString()
         {
-            return $"X = {X} \t y= {Y}";
+            return $"({X} , {Y})";
         }
     }
 }
