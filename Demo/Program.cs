@@ -96,6 +96,15 @@ namespace Demo
 
 
 
+            #region Is As Operator
+            //Employee emoloyee01 = new Employee(6, "sayed", 1000);
+            //Employee emoloyee02 = new Employee(1, "sayed", 1000);
+
+            //Console.WriteLine(emoloyee01.GetHashCode());
+            //Console.WriteLine(emoloyee02.GetHashCode());
+
+            #endregion
+
 
         }
     }

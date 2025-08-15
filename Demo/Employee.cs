@@ -27,19 +27,36 @@ namespace Demo
 
         public override bool Equals(object? obj)
         {
-            if (obj == null) return false;
-            if(obj is Employee employee)
-            {
-                return this.Id==employee.Id && this.Name== employee.Name &&  this.Salary==employee.Salary; 
-                  
-            }
-            return false;
+            #region UnSafeCasting
+            //Employee? employee = (Employee?)obj;
+            //if (employee == null) return false;
+
+
+            //return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+
+            #endregion
+
+            #region Is Operator
+            //if (obj is null) return false;
+            //else if (obj is Employee employee) // make cheack and casting cheak id obj is Employee the casting take the (obj=employee)
+            //    // obj must be employee or the othe types that inherit from Employee
+            //    return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+            //return false;
+            #endregion
+
+            #region As operator
+            Employee? employee = obj as Employee;
+            if (employee == null) return false;
+            return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+            #endregion
+
+
         }
 
         public override int GetHashCode()
         {
            // return this.Id.GetHashCode()+this.Name.GetHashCode()+this.Salary.GetHashCode(); //deprecated
-           return HashCode.Combine(Id.GetHashCode(), Name.GetHashCode(), Salary.GetHashCode());
+           return HashCode.Combine(Id, Name, Salary);
         }
 
 
