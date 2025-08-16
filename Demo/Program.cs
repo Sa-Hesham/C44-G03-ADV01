@@ -106,6 +106,66 @@ namespace Demo
             #endregion
 
 
+            #region IEquatble
+
+            //int[] arr = new int[] { 10, 20, 30, 49, 50, 60 };
+            //int value = 20;
+            //int index = Helper<int>.LinearSearch(arr, value);
+            //Console.WriteLine($"  value {value} , at index {index}");
+
+
+            //Point[] points = new Point[]
+            //{
+            //       new Point(1,2),
+            //       new Point(3,4),
+            //       new Point(4,5),
+            //};
+
+            //Point p3 = new Point(3, 4);
+            //int index2 = Helper<Point>.LinearSearch(points, p3);
+            //Console.WriteLine($"  Value = {p3} , at index {index2}");
+
+
+            //Employee[] employees =
+            //{
+            //      new Employee(1,"sayed",5000),
+            //      new Employee(2,"hesham",4000),
+            //      new Employee(3,"ahmed",7000)
+
+            //  };
+
+            //Employee emp = new Employee(1, "sayed", 5000);
+
+            //int index3 = Helper<Employee>.LinearSearch(employees, emp);
+            //Console.WriteLine(index3);
+
+
+            #endregion
+
+            #region IEuality comaproer
+
+            //Employee[] employees =
+            //{
+            //	new Employee(10,"Samy" , 5000),
+            //	new Employee(20,"Omar" , 6000),
+            //	new Employee(30,"Amr" , 9000),
+            //	new Employee(40,"Samar" , 10000)
+            //};
+
+            //Employee employee = new Employee() { Id = 30 };
+
+            //int Result = Helper<Employee>.LinearSearch(employees, employee);
+            //Console.WriteLine($"Index Of {employee} Is {Result}"); //  -1 
+
+
+            //Result = Helper<Employee>.LinearSearch(employees, employee, new EmployeeNameEqualityComparer());
+            //Console.WriteLine($"Index Of {employee} Is {Result}"); //  -1 
+
+
+            //Result = Helper<Employee>.LinearSearch(employees, employee, new EmployeIdEqualityComparer());
+            //Console.WriteLine($"Index Of {employee} Is {Result}"); //  2 
+
+            #endregion
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public struct Point
+    public struct Point : IEquatable<Point>
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -19,6 +19,11 @@ namespace Demo
         public override string ToString()
         {
             return $"({X} , {Y})";
+        }
+
+        public bool Equals(Point other)
+        {
+         return this.X==other.X && this.Y==other.Y;   
         }
     }
 }

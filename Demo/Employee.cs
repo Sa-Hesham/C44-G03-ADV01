@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public class Employee
+    public class Employee :IEquatable<Employee>
     {
 
         public int Id { get; set; }
@@ -59,6 +59,14 @@ namespace Demo
            return HashCode.Combine(Id, Name, Salary);
         }
 
+        public bool Equals(Employee? employee)
+        {
+            if (employee is null )
+            {
+                return false;
 
+            }
+            return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+        }
     }
 }
