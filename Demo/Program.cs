@@ -166,6 +166,49 @@ namespace Demo
             //Console.WriteLine($"Index Of {employee} Is {Result}"); //  2 
 
             #endregion
+
+
+
+            #region PuBBle Sort
+
+            //int[] arr = { 5,3,8,4,2};
+            //Helper<int>.PubbleSort(arr);
+
+            //foreach (int  item in arr) {
+
+            //    Console.WriteLine( item );
+
+
+
+
+            // }
+
+
+            Employee[] employees = {
+
+            new Employee(1,"sayed",2000),
+            new Employee(2,"Zaki",3000),
+            new Employee(15,"Zekry",5000),
+            new Employee(8,"Zezoo",20000),
+            new Employee(9,"Zaki",6000),
+
+
+
+            };
+
+
+
+            Helper<Employee>.PubbleSort(employees);
+            foreach (Employee employee in employees) {
+
+                Console.WriteLine(employee);
+            
+            
+            }
+
+
+
+            #endregion
         }
     }
 }

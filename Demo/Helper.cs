@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public static class Helper<T> where T:IEquatable<T>
+    public static class Helper<T> where T:IEquatable<T>,IComparable<T>
     {
         public static void SWap(ref T a, ref T b)
         {
@@ -37,6 +37,23 @@ namespace Demo
             }
             return -1;
 
+        }
+
+
+        public static void PubbleSort(T[] arr)
+        {
+            if (arr is not null && arr.Length > 0)
+            {
+                for(int i = 0;i < arr.Length; i++)
+                {
+                    for(int j = 0; j < arr.Length-i-1; j++)
+                    {
+                        if (arr[j].CompareTo(arr[j + 1]) >0 )
+                        SWap(ref arr[j], ref arr[j + 1]);
+
+                    }
+                }
+            }
         }
 
 

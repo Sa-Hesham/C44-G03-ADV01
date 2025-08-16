@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public class Employee :IEquatable<Employee>
+    public class Employee :IEquatable<Employee> ,IComparable<Employee>
     {
 
         public int Id { get; set; }
@@ -24,7 +24,10 @@ namespace Demo
            Salary = salary;
         }
 
-
+        public override string ToString()
+        {
+            return $" name = {Name} , salary {Salary}  ID = {Id}";
+        }
         public override bool Equals(object? obj)
         {
             #region UnSafeCasting
@@ -67,6 +70,15 @@ namespace Demo
 
             }
             return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+        }
+
+    
+     
+
+        public int CompareTo(Employee? other)
+        {
+          if(other is null) return 1;
+          return this.Id.CompareTo(other.Id);   
         }
     }
 }
