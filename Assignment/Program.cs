@@ -42,6 +42,45 @@ namespace Assignment
             //    Console.WriteLine(item);
             //}
             #endregion
+
+
+
+            #region َQ4
+
+            //FixedSizeList<int> list = new FixedSizeList<int>(3);
+
+            //Console.WriteLine("Adding elements 10, 20, 30:");
+            //list.Add(10);
+            //list.Add(20);
+            //list.Add(30);
+
+            //Console.WriteLine("Reading elements:");
+            //Console.WriteLine($"Element at index 0: {list.GetIndex(0)}");
+            //Console.WriteLine($"Element at index 1: {list.GetIndex(1)}");
+            //Console.WriteLine($"Element at index 2: {list.GetIndex(2)}");
+                                                             
+            //Console.WriteLine("\nTrying to add fourth element:");
+            //try
+            //{
+            //    list.Add(40);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+
+   
+            //try
+            //{
+            //    int  item = list.GetIndex(5);
+            //}
+            //catch (ArgumentOutOfRangeException ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+
+           
+            #endregion
         }
     }
 }
