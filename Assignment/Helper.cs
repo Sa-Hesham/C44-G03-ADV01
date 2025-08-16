@@ -56,7 +56,29 @@ namespace Assignment
             return evens;
         }
 
+        public static int UniqueChar(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return -1;
 
+            for (int i = 0; i < s.Length; i++)
+            {
+                bool isUnique = true;
+
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (i != j && s[i] == s[j])  
+                    {
+                        isUnique = false;
+                        break;
+                    }
+                }
+
+                if (isUnique)
+                    return i;
+            }
+
+            return -1;
+        }
 
 
 

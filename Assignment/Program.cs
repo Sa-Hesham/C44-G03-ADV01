@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Threading.Channels;
 
 namespace Assignment
 {
@@ -58,7 +59,7 @@ namespace Assignment
             //Console.WriteLine($"Element at index 0: {list.GetIndex(0)}");
             //Console.WriteLine($"Element at index 1: {list.GetIndex(1)}");
             //Console.WriteLine($"Element at index 2: {list.GetIndex(2)}");
-                                                             
+
             //Console.WriteLine("\nTrying to add fourth element:");
             //try
             //{
@@ -69,7 +70,7 @@ namespace Assignment
             //    Console.WriteLine($"Error: {ex.Message}");
             //}
 
-   
+
             //try
             //{
             //    int  item = list.GetIndex(5);
@@ -79,7 +80,15 @@ namespace Assignment
             //    Console.WriteLine($"Error: {ex.Message}");
             //}
 
-           
+
+            #endregion
+
+
+
+            #region Q5
+            Console.WriteLine(Helper.UniqueChar("AAbb") == -1 ? "un_unique" : "unique");
+
+
             #endregion
         }
     }
