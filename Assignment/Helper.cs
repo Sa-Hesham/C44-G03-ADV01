@@ -39,7 +39,22 @@ namespace Assignment
 
 
                 
+        public static List<int> GetEvennumbers (List<int> numbers)
+        {
 
+
+            List<int> evens = new List<int>();
+
+            foreach (int num in numbers)
+            {
+                if (num % 2 == 0) 
+                {
+                    evens.Add(num);
+                }
+            }
+
+            return evens;
+        }
 
 
 
