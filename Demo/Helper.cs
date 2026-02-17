@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    public static class Helper<T> where T:IEquatable<T>,IComparable<T>
+    {
+        public static void SWap(ref T a, ref T b)
+        {
+            T temb = a;
+            a = b;
+            b = temb;
+        }
+
+        public static int LinearSearch(T[] arr, T value)
+        {
+            if (arr is not null && arr.Length > 0 && value is not null)
+            {
+
+                for (int i = 0; i < arr.Length; i++)
+
+
+                {
+                    //if (arr[i]?.Equals(value)??false)
+                    if (value.Equals(arr[i]))
+
+                       return i+1;
+
+                }
+
+
+              
+            }
+            return -1;
+
+        }
+
+
+        public static void PubbleSort(T[] arr)
+        {
+            if (arr is not null && arr.Length > 0)
+            {
+                for(int i = 0;i < arr.Length; i++)
+                {
+                    for(int j = 0; j < arr.Length-i-1; j++)
+                    {
+                        if (arr[j].CompareTo(arr[j + 1]) >0 )
+                        SWap(ref arr[j], ref arr[j + 1]);
+
+                    }
+                }
+            }
+        }
+
+
+
+        public static int LinearSearch(T[] arr, T value ,IEqualityComparer<T> comparor)
+        {
+            if (arr is not null && arr.Length > 0 && value is not null)
+            {
+
+                for (int i = 0; i < arr.Length; i++)
+
+
+                {
+                    //if (arr[i]?.Equals(value)??false)
+                    if (value.Equals(arr[i]))
+
+                        return i + 1;
+
+                }
+
+
+
+            }
+            return -1;
+
+        }
+
+    }
+}
+
+
